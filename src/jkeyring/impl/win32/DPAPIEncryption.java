@@ -48,15 +48,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Callable;
 
+import jkeyring.intf.IEncryptionProvider;
+
 import com.sun.jna.Memory;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
 import com.sun.jna.WString;
 import com.sun.jna.win32.StdCallLibrary;
-
-import jkeyring.impl.Utils;
-import jkeyring.intf.IEncryptionProvider;
 
 /**
  * Data protection utility for Microsoft Windows.

@@ -45,7 +45,12 @@
 package jkeyring;
 
 public class KeyringException extends Exception {
-    public KeyringException() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public KeyringException() {
 	super();
     }
 

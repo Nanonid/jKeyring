@@ -44,10 +44,8 @@
 
 package jkeyring.impl.crypto;
 
-import java.awt.EventQueue;
 import java.awt.GridLayout;
 import java.security.Key;
-import java.io.Console;
 import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.KeySpec;
@@ -55,17 +53,16 @@ import java.util.Arrays;
 import java.util.concurrent.Callable;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.prefs.Preferences;
+
 import javax.crypto.Cipher;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.PBEParameterSpec;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.JTextArea;
-import javax.swing.JPasswordField;
-import javax.swing.JPanel;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 
 import jkeyring.impl.Utils;
 import jkeyring.intf.IEncryptionProvider;
@@ -85,7 +82,8 @@ public class MasterPasswordEncryption implements IEncryptionProvider {
     private SecretKeyFactory KEY_FACTORY;
     private AlgorithmParameterSpec PARAM_SPEC;
 
-    private Preferences prefs;
+    @SuppressWarnings("unused")
+	private Preferences prefs;
     private Cipher encrypt, decrypt;
     private boolean unlocked;
     private Callable<Void> encryptionChanging;

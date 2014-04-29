@@ -44,15 +44,12 @@
 
 package jkeyring.impl.mac;
 
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import com.sun.jna.Pointer;
 
 import jkeyring.KeyringException;
 import jkeyring.intf.IKeyring;
+
+import com.sun.jna.Pointer;
 
 public class MacProvider implements IKeyring {
     private static final Charset UTF8 = Charset.forName("UTF-8");

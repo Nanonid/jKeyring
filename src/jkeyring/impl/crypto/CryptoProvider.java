@@ -45,7 +45,6 @@
 package jkeyring.impl.crypto;
 
 import java.security.SecureRandom;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Callable;

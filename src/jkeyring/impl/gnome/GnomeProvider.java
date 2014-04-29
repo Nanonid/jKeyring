@@ -44,19 +44,18 @@
 
 package jkeyring.impl.gnome;
 
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.text.MessageFormat;
-import java.util.MissingResourceException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import static jkeyring.impl.gnome.GnomeKeyringLibrary.GNOME_KEYRING_ITEM_GENERIC_SECRET;
+import static jkeyring.impl.gnome.GnomeKeyringLibrary.GnomeKeyringAttribute_SIZE;
+import static jkeyring.impl.gnome.GnomeKeyringLibrary.LIBRARY;
 
-import com.sun.jna.Pointer;
+import java.io.IOException;
 
 import jkeyring.KeyringException;
-import jkeyring.intf.IKeyring;
 import jkeyring.impl.Base64;
-import static jkeyring.impl.gnome.GnomeKeyringLibrary.*;
+import jkeyring.impl.gnome.GnomeKeyringLibrary.GnomeKeyringFound;
+import jkeyring.intf.IKeyring;
+
+import com.sun.jna.Pointer;
 
 public class GnomeProvider implements IKeyring {
     private static final String KEY = "key"; // NOI18N

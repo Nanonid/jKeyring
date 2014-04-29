@@ -46,10 +46,8 @@ package jkeyring;
 
 import jkeyring.intf.IEncryptionProvider;
 import jkeyring.intf.IKeyring;
-import jkeyring.impl.crypto.CryptoProvider;
-import jkeyring.impl.crypto.MasterPasswordEncryption;
 
-public class Test {
+public class Test1 {
     public static void main(String[] argv) {
 	try {
 	    IKeyring keyring = KeyringFactory.getDefaultKeyring(IEncryptionProvider.Mode.GUI);
